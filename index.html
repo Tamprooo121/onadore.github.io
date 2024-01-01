@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+@keyframes blink {
+0% { color: red; }
+10% { color: blue; }
+20% { color: green; }
+30% { color: black; }
+40% { color: white; }
+50% { color: pink; }
+60% { color: yellow; }
+70% { color: orange ; }
+80% { color: purple; }
+90% { color: brown; }
+100% { color: gray; }
+}
+
+.blink {
+  animation: blink 1s infinite;
+  font-size: 32px;
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+<p class="blink">Chào bạn</p>
+<script>
+var text = "Chào bạn";
+var index = 0;
+var speed = 100; // thời gian giữa mỗi ký tự (ms)
+var p = document.querySelector("p");
+p.innerHTML = "";
+
+function type() {
+  if (index < text.length) {
+    p.innerHTML += text.charAt(index);
+    index++;
+  }
+}
+
+setInterval(type, speed);
+</script>
+</body>
+</html>
